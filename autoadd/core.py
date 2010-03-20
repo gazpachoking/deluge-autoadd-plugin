@@ -195,7 +195,11 @@ class Core(CorePluginBase):
         opts = self._clean_unicode(opts)
         for filename in os.listdir(watchdir["abspath"]):
             if filename.split(".")[-1] == "torrent":
-                filepath = os.path.join(watchdir["abspath"], filename)
+                try:
+                    filepath = os.path.join(watchdir["abspath"], filename)
+                except UnicodeDecodeError, e:
+                    log.error("Unable to auto add torrent due to inproper filename encoding: %s", e)
+                    continue
                 try:
                     filedump = self.load_torrent(filepath)
                 except (RuntimeError, Exception), e:
