@@ -42,7 +42,7 @@ from setuptools import setup
 __plugin_name__ = "AutoAdd"
 __author__ = "GazpachoKing"
 __author_email__ = "chase.sterling@gmail.com"
-__version__ = "0.27"
+__version__ = "0.28"
 __url__ = "http://forum.deluge-torrent.org/viewtopic.php?f=9&t=26775"
 __license__ = "GPLv3"
 __description__ = "Monitors folders for .torrent files."
