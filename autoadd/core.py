@@ -289,6 +289,7 @@ class Core(CorePluginBase):
         options = self._clean_unicode(options)
         abswatchdir = os.path.abspath(options['path'])
         CheckInput(os.path.isdir(abswatchdir) , _("Path does not exist."))
+        CheckInput(os.access(abswatchdir, os.R_OK|os.W_OK), "You must have read and write access to watch folder.")
         for watchdir_id, watchdir in self.watchdirs.iteritems():
             if watchdir['abspath'] == abswatchdir:
                 raise Exception("Path is already being watched.")
