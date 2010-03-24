@@ -40,7 +40,7 @@
 from setuptools import setup
 
 __plugin_name__ = "AutoAdd"
-__author__ = "GazpachoKing"
+__author__ = "Chase Sterling"
 __author_email__ = "chase.sterling@gmail.com"
 __version__ = "0.28"
 __url__ = "http://forum.deluge-torrent.org/viewtopic.php?f=9&t=26775"
