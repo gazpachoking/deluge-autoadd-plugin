@@ -4,3 +4,4 @@ AutoAdd.egg-info/*
 *.pyc
 *.pyo
 *.bak
+*~
